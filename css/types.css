@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'AntonSC-Regular';
+    src: url('../assets/fonts/AntonSC-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family:'OCR-B22';
+    src:;
+    font-weight: normal;
+    font-style: normal;
+}
