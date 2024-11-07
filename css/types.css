@@ -6,8 +6,8 @@
 }
 
 @font-face{
-    font-family:'OCR-B22';
-    src:;
+    font-family: 'Danfo-Regular-VariableFont_ELSH';
+    src: url('../assets/fonts/Danfo-Regular-VariableFont_ELSH.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
