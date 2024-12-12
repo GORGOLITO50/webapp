@@ -1,128 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Haktarus - The Comic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Grenze Gotisch', serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #000, #222);
-            color: #eaeaea;
-        }
-        header {
-            background: #111;
-            padding: 1rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            color: #e63946;
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            list-style: none;
-            margin: 1rem 0 0;
-        }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #eaeaea;
-            font-size: 1.2rem;
-        }
-        nav ul li a:hover {
-            color: #e63946;
-        }
-        .hero {
-            text-align: center;
-            padding: 4rem 1rem;
-            background: url('background.jpg') center/cover no-repeat;
-            color: #fff;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .gallery {
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-        .gallery img {
-            width: 100%;
-            border: 2px solid #444;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        .about, .contact {
-            padding: 2rem;
-            text-align: center;
-        }
-        footer {
-            background: #111;
-            color: #eaeaea;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
+      body {
+        font-family: "Grenze Gotisch", serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #000, #222);
+        color: #eaeaea;
+      }
+      header {
+        background: #111;
+        padding: 1rem;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #e63946;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        list-style: none;
+        margin: 1rem 0 0;
+      }
+      nav ul li {
+        margin: 0 1rem;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #eaeaea;
+        font-size: 1.2rem;
+      }
+      nav ul li a:hover {
+        color: #e63946;
+      }
+      .hero {
+        text-align: center;
+        padding: 4rem 1rem;
+        background: url("background.jpg") center/cover no-repeat;
+        color: #fff;
+      }
+      .hero h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        font-size: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .gallery {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+      }
+      .gallery img {
+        width: 100%;
+        border: 2px solid #444;
+        border-radius: 8px;
+        transition: transform 0.3s;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+      .about,
+      .contact {
+        padding: 2rem;
+        text-align: center;
+      }
+      footer {
+        background: #111;
+        color: #eaeaea;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Haktarus</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <h1 style="font-size: 75px">Haktarus</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="hero">
-        <h2>Welcome to the World of Haktarus</h2>
-        <p>Explore the dark and haunting tale of Evermont and Haktarus. A journey through despair, hope, and redemption.</p>
+      <h2>Bienvenido al mundo de Kartovia</h2>
+      <p>
+        Explore the dark and haunting tale of Evermont and Haktarus. A journey
+        through despair, hope, and redemption.
+      </p>
     </section>
 
     <section id="about" class="about">
-        <h2>About the Comic</h2>
-        <p><strong>Haktarus</strong> is a gripping graphic novel following Evermont, a 17-year-old who forges a bond with Haktarus, a demon-like entity. Together, they uncover secrets that blur the lines between good and evil.</p>
+      <h2>About the Comic</h2>
+      <p>
+        <strong>Haktarus</strong> is a gripping graphic novel following
+        Evermont, a 17-year-old who forges a bond with Haktarus, a demon-like
+        entity. Together, they uncover secrets that blur the lines between good
+        and evil.
+      </p>
     </section>
 
     <section id="gallery" class="gallery">
-        <img src="haktarus1.jpg" alt="Haktarus Scene 1">
-        <img src="haktarus2.jpg" alt="Haktarus Scene 2">
-        <img src="haktarus3.jpg" alt="Haktarus Scene 3">
-        <img src="haktarus4.jpg" alt="Haktarus Scene 4">
+      <img src="haktarus1.jpg" alt="Haktarus Scene 1" />
+      <img src="haktarus2.jpg" alt="Haktarus Scene 2" />
+      <img src="haktarus3.jpg" alt="Haktarus Scene 3" />
+      <img src="haktarus4.jpg" alt="Haktarus Scene 4" />
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>If you want to reach out, please email us at <a href="mailto:contact@haktarus.com">contact@haktarus.com</a>.</p>
+      <h2>Contact</h2>
+      <p>
+        If you want to reach out, please email us at
+        <a href="mailto:contact@haktarus.com">contact@haktarus.com</a>.
+      </p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Haktarus Comic. All rights reserved.</p>
+      <p>&copy; 2024 Haktarus Comic. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
+
+css grid generator angrytools gsap
