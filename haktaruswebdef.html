@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haktarus - El Cómic</title>
+    <style>
+        body {
+            font-family: 'Grenze Gotisch', serif;
+            background-color: #1c1c1c;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2a2a2a;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #eaeaea;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff4500;
+        }
+        .hero {
+            background: url('path/to/your/hero-image.jpg') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px #000000;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h3 {
+            font-size: 2rem;
+            border-bottom: 2px solid #ff4500;
+            padding-bottom: 10px;
+        }
+        .comic-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .comic-preview img {
+            width: 200px;
+            border: 2px solid #ff4500;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #2a2a2a;
+            text-align: center;
+            padding: 10px;
+            color: #eaeaea;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Haktarus - El Cómic</h1>
+        <nav>
+            <a href="#sinopsis">Sinopsis</a>
+            <a href="#personajes">Personajes</a>
+            <a href="#galeria">Galería</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>¡Descubre el oscuro mundo de Haktarus!</h2>
+    </section>
+    <section id="sinopsis" class="content">
+        <h3>Sinopsis</h3>
+        <p>En un mundo plagado de oscuridad y secretos, Haktarus y Evermont enfrentan sus demonios internos y externos. Un cómic donde lo sobrenatural y lo humano chocan en un épico relato.</p>
+    </section>
+    <section id="personajes" class="content">
+        <h3>Personajes</h3>
+        <ul>
+            <li><strong>Haktarus:</strong> Una criatura sobrenatural atormentada por su existencia.</li>
+            <li><strong>Evermont:</strong> Un joven que se comunica con Haktarus mientras lucha con su propia humanidad.</li>
+        </ul>
+    </section>
+    <section id="galeria" class="content">
+        <h3>Galería</h3>
+        <div class="comic-preview">
+            <img src="path/to/comic1.jpg" alt="Cómic Página 1">
+            <img src="path/to/comic2.jpg" alt="Cómic Página 2">
+            <img src="path/to/comic3.jpg" alt="Cómic Página 3">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Haktarus Cómic. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
