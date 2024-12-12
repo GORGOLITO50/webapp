@@ -15,7 +15,7 @@ body {
   }
   header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: #e63946;
   }
   nav ul {
@@ -43,7 +43,7 @@ body {
     color: #fff;
   }
   .hero h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   .hero p {
