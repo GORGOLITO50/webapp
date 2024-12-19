@@ -7,11 +7,156 @@
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;700&display=swap" rel="stylesheet"/>  
     <link href="./css/index.css" rel="stylesheet">
     <style>
-      .characters {
-        padding: 2rem 4rem;
+      body {
+        font-family: "Grenze Gotisch", serif;
+        margin: 0;
+        padding: 0;
+        background: #111;
+        color: #eaeaea;
       }
+
+      header {
+        background: #222;
+        padding: 1rem;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 0.5rem 0 0;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin: 0 1rem;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #eaeaea;
+        font-size: 1rem;
+      }
+
+      nav ul li a:hover {
+        color: #e63946;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 2rem 1rem;
+        background: url("background.jpg") center/cover no-repeat;
+        color: #fff;
+      }
+
+      .hero h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .about,
+      .gallery,
+      .characters,
+      .contact {
+        padding: 2rem 1rem;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+      }
+
+      .gallery img {
+        width: 100%;
+        border-radius: 5px;
+        transition: transform 0.3s;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      .characters {
+        padding: 2rem;
+      }
+
       .character {
-        margin-left: 2rem;
+        margin-left: 1rem;
+      }
+
+      .character-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+
+      .contact {
+        text-align: center;
+      }
+
+      footer {
+        background: #222;
+        color: #eaeaea;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+
+        .hero h2 {
+          font-size: 1.5rem;
+        }
+
+        .hero p {
+          font-size: 0.9rem;
+        }
+
+        .character-list {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav ul li {
+          margin: 0 0.5rem;
+        }
+
+        nav ul li a {
+          font-size: 0.9rem;
+        }
+
+        .hero h2 {
+          font-size: 1.2rem;
+        }
+
+        .hero p {
+          font-size: 0.8rem;
+        }
+
+        .character-list {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
