@@ -1,113 +1,266 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Haktarus - El Cómic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;700&display=swap" rel="stylesheet"/>  
+    <link href="./css/index.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Grenze Gotisch', serif;
-            background-color: #1c1c1c;
-            color: #eaeaea;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2a2a2a;
-            text-align: center;
-            padding: 20px;
-        }
+      body {
+        font-family: "Grenze Gotisch", serif;
+        margin: 0;
+        padding: 0;
+        background: #111;
+        color: #eaeaea;
+      }
+      body {
+        background: url('./assets/images/Group_55.svg') repeat;
+        background-size: 100px 100px; 
+        font-family: "Grenze Gotisch", serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: #222;
+        padding: 1rem;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 3.5rem;
+      }
+
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 0.5rem 0 0;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin: 0 1rem;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #eaeaea;
+        font-size: 1rem;
+      }
+
+      nav ul li a:hover {
+        color: #e63946;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 2rem 1rem;
+        background: url("background.jpg") center/cover no-repeat;
+        color: #fff;
+      }
+
+      .hero h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .about,
+      .gallery,
+      .characters,
+      .contact {
+        padding: 2rem 1rem;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Imágenes más grandes */
+        gap: 1.5rem; /* Espacio más amplio entre imágenes */
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        transition: transform 0.3s;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      .characters {
+        padding: 2rem;
+      }
+
+      .character {
+        margin-left: 1rem;
+      }
+
+      .character-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+
+      .contact {
+        text-align: center;
+      }
+
+      footer {
+        background: #222;
+        color: #eaeaea;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
         header h1 {
-            font-size: 3rem;
-            margin: 0;
+          font-size: 1.5rem;
         }
-        nav {
-            margin: 20px 0;
-            text-align: center;
-        }
-        nav a {
-            text-decoration: none;
-            color: #eaeaea;
-            margin: 0 15px;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ff4500;
-        }
-        .hero {
-            background: url('path/to/your/hero-image.jpg') center/cover no-repeat;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            text-shadow: 2px 2px 5px #000000;
-        }
+
         .hero h2 {
-            font-size: 2.5rem;
+          font-size: 1.5rem;
         }
-        .content {
-            padding: 20px;
+
+        .hero p {
+          font-size: 0.9rem;
         }
-        .content h3 {
-            font-size: 2rem;
-            border-bottom: 2px solid #ff4500;
-            padding-bottom: 10px;
+
+        .character-list {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
-        .comic-preview {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+
+        .gallery-grid {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste para pantallas más pequeñas */
         }
-        .comic-preview img {
-            width: 200px;
-            border: 2px solid #ff4500;
-            border-radius: 5px;
+      }
+
+      @media (max-width: 480px) {
+        nav ul li {
+          margin: 0 0.5rem;
         }
-        footer {
-            background-color: #2a2a2a;
-            text-align: center;
-            padding: 10px;
-            color: #eaeaea;
-            font-size: 0.9rem;
+
+        nav ul li a {
+          font-size: 0.9rem;
         }
+
+        .hero h2 {
+          font-size: 1.2rem;
+        }
+
+        .hero p {
+          font-size: 0.8rem;
+        }
+
+        .character-list {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr; /* Imágenes en una columna en pantallas muy pequeñas */
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Haktarus - El Cómic</h1>
-        <nav>
-            <a href="#sinopsis">Sinopsis</a>
-            <a href="#personajes">Personajes</a>
-            <a href="#galeria">Galería</a>
-        </nav>
-    </header>
-    <section class="hero">
-        <h2>¡Descubre el oscuro mundo de Haktarus!</h2>
-    </section>
-    <section id="sinopsis" class="content">
-        <h3>Sinopsis</h3>
-        <p>En un mundo plagado de oscuridad y secretos, Haktarus y Evermont enfrentan sus demonios internos y externos. Un cómic donde lo sobrenatural y lo humano chocan en un épico relato.</p>
-    </section>
-    <section id="personajes" class="content">
-        <h3>Personajes</h3>
+      <h1>Haktarus</h1>
+      <nav>
         <ul>
-            <li><strong>Haktarus:</strong> Una criatura sobrenatural atormentada por su existencia.</li>
-            <li><strong>Evermont:</strong> Un joven que se comunica con Haktarus mientras lucha con su propia humanidad.</li>
+          <li><a href="#about">Acerca de</a></li>
+          <li><a href="#gallery">Galería</a></li>
+          <li><a href="#characters">Personajes</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Bienvenido al mundo de Kartovia</h2>
+      <p>
+        Explora su intrigante y oscura historia de Evermont y Haktarus. Un viaje
+        a través de la desesperación, la esperanza y la redención.
+      </p>
     </section>
-    <section id="galeria" class="content">
-        <h3>Galería</h3>
-        <div class="comic-preview">
-            <img src="path/to/comic1.jpg" alt="Cómic Página 1">
-            <img src="path/to/comic2.jpg" alt="Cómic Página 2">
-            <img src="path/to/comic3.jpg" alt="Cómic Página 3">
-        </div>
+
+    <section id="about" class="about">
+      <h2>Acerca del Cómic</h2>
+      <p>
+        <strong>Haktarus</strong> es una novela gráfica que narra la historia de Evermont, un joven de 17 años que comienza a tener encuentros con Haktarus, una entidad demoníaca. Juntos, descubren secretos que difuminan la línea entre el bien y el mal, explorando los rincones más oscuros del alma humana.
+      </p>
+      <p>
+        Esta obra combina arte detallado y una narrativa profunda, creando una experiencia inmersiva para los lectores amantes de las historias góticas y fantásticas.
+      </p>
     </section>
+
+    <section id="gallery" class="gallery">
+      <h2>Galería</h2>
+      <p>Explora algunas de las escenas más impactantes del cómic:</p>
+      <div class="gallery-grid">
+        <img src="haktarus1.jpg" alt="Escena 1 de Haktarus" />
+        <img src="haktarus2.jpg" alt="Escena 2 de Haktarus" />
+        <img src="haktarus3.jpg" alt="Escena 3 de Haktarus" />
+        <img src="haktarus4.jpg" alt="Escena 4 de Haktarus" />
+        <!-- Nueva imagen añadida -->
+        <img src="./assets/images/Def.jpg" alt="Ilustración de Haktarus" />
+      </div>
+    </section>
+
+    <section id="characters" class="characters">
+      <h2>Personajes</h2>
+      <div class="character-list">
+        <article class="character">
+          <h3>Evermont</h3>
+          <p>
+            Un joven de 17 años con un pasado lleno de tragedias. A pesar de sus dudas, demuestra una valentía inesperada cuando se enfrenta a los secretos de Kartovia.
+          </p>
+        </article>
+        <article class="character">
+          <h3>Haktarus</h3>
+          <p>
+            Una entidad demoníaca cuya verdadera naturaleza es un misterio. Actúa como mentor y antagonista, empujando a Evermont a enfrentarse a sus miedos más profundos.
+          </p>
+        </article>
+        <article class="character">
+          <h3>Kronulk</h3>
+          <p>
+            Una enigmática joven con un conocimiento profundo de las antiguas leyendas de Kartovia. A menudo es la voz de la razón en momentos de desesperación.
+          </p>
+        </article>
+        <article class="character">
+          <h3>Shavarkunk</h3>
+          <p>
+            Gobernante de Kartovia, atrapado entre proteger a su pueblo y enfrentar las fuerzas oscuras que amenazan su reino.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contacto</h2>
+      <p>
+        ¿Tienes preguntas o quieres saber más sobre <strong>Haktarus</strong>? Escríbenos a nuestro correo electrónico:
+        <a href="mailto:contact@haktarus.com">contact@haktarus.com</a>.
+      </p>
+      <p>También puedes seguirnos en nuestras redes sociales para obtener las últimas actualizaciones.</p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Haktarus Cómic. Todos los derechos reservados.</p>
+      <p>&copy; 2024 Haktarus Comic. Todos los derechos reservados.</p>
     </footer>
-</body>
+  </body>
 </html>
