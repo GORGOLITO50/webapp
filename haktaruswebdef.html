@@ -1,266 +1,255 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Haktarus - El Cómic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;700&display=swap" rel="stylesheet"/>  
-    <link href="./css/index.css" rel="stylesheet">
-    <style>
-      body {
-        font-family: "Grenze Gotisch", serif;
-        margin: 0;
-        padding: 0;
-        background: #111;
-        color: #eaeaea;
-      }
-      body {
-        background: url('./assets/images/Group_55.svg') repeat;
-        background-size: 100px 100px; 
-        font-family: "Grenze Gotisch", serif;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#222222">
+  <link rel="manifest" href="manifest.json">
+  <title>Haktarus - El Cómic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./css/index.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Grenze Gotisch", serif;
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #eaeaea;
+      background: url('./assets/images/Group_55.svg') repeat;
+      background-size: 100px 100px;
+    }
 
-      header {
-        background: #222;
-        padding: 1rem;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
+    header {
+      background: #222;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
+    header h1 {
+      margin: 0;
+      font-size: 3.5rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0.5rem 0 0;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #eaeaea;
+      font-size: 1rem;
+    }
+
+    nav ul li a:hover {
+      color: #e63946;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: url("background.jpg") center/cover no-repeat;
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about,
+    .gallery,
+    .characters,
+    .contact,
+    .references {
+      padding: 2rem 1rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .character-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      background: #222;
+      color: #eaeaea;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
       header h1 {
-        margin: 0;
-        font-size: 3.5rem;
-      }
-
-      nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-        margin: 0.5rem 0 0;
-        list-style: none;
-      }
-
-      nav ul li {
-        margin: 0 1rem;
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        color: #eaeaea;
-        font-size: 1rem;
-      }
-
-      nav ul li a:hover {
-        color: #e63946;
-      }
-
-      .hero {
-        text-align: center;
-        padding: 2rem 1rem;
-        background: url("background.jpg") center/cover no-repeat;
-        color: #fff;
+        font-size: 1.5rem;
       }
 
       .hero h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
+        font-size: 1.5rem;
       }
 
       .hero p {
-        font-size: 1rem;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .about,
-      .gallery,
-      .characters,
-      .contact {
-        padding: 2rem 1rem;
-      }
-
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Imágenes más grandes */
-        gap: 1.5rem; /* Espacio más amplio entre imágenes */
-      }
-
-      .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-        transition: transform 0.3s;
-      }
-
-      .gallery img:hover {
-        transform: scale(1.05);
-      }
-
-      .characters {
-        padding: 2rem;
-      }
-
-      .character {
-        margin-left: 1rem;
+        font-size: 0.9rem;
       }
 
       .character-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav ul li {
+        margin: 0 0.5rem;
       }
 
-      .contact {
-        text-align: center;
+      nav ul li a {
+        font-size: 0.9rem;
       }
 
-      footer {
-        background: #222;
-        color: #eaeaea;
-        text-align: center;
-        padding: 1rem;
-        margin-top: 2rem;
+      .hero h2 {
+        font-size: 1.2rem;
       }
 
-      @media (max-width: 768px) {
-        header h1 {
-          font-size: 1.5rem;
-        }
-
-        .hero h2 {
-          font-size: 1.5rem;
-        }
-
-        .hero p {
-          font-size: 0.9rem;
-        }
-
-        .character-list {
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        }
-
-        .gallery-grid {
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste para pantallas más pequeñas */
-        }
+      .hero p {
+        font-size: 0.8rem;
       }
 
-      @media (max-width: 480px) {
-        nav ul li {
-          margin: 0 0.5rem;
-        }
-
-        nav ul li a {
-          font-size: 0.9rem;
-        }
-
-        .hero h2 {
-          font-size: 1.2rem;
-        }
-
-        .hero p {
-          font-size: 0.8rem;
-        }
-
-        .character-list {
-          grid-template-columns: 1fr;
-        }
-
-        .gallery-grid {
-          grid-template-columns: 1fr; /* Imágenes en una columna en pantallas muy pequeñas */
-        }
+      .character-list {
+        grid-template-columns: 1fr;
       }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Haktarus</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">Acerca de</a></li>
-          <li><a href="#gallery">Galería</a></li>
-          <li><a href="#characters">Personajes</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Haktarus</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Acerca de</a></li>
+        <li><a href="#gallery">Galería</a></li>
+        <li><a href="#characters">Personajes</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#references">Inspiraciones</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="hero">
-      <h2>Bienvenido al mundo de Kartovia</h2>
-      <p>
-        Explora su intrigante y oscura historia de Evermont y Haktarus. Un viaje
-        a través de la desesperación, la esperanza y la redención.
-      </p>
-    </section>
+  <section class="hero">
+    <h2>Bienvenido al mundo de Kartovia</h2>
+    <p>
+      Explora su intrigante y oscura historia de Evermont y Haktarus. Un viaje
+      a través de la desesperación, la esperanza y la redención.
+    </p>
+  </section>
 
-    <section id="about" class="about">
-      <h2>Acerca del Cómic</h2>
-      <p>
-        <strong>Haktarus</strong> es una novela gráfica que narra la historia de Evermont, un joven de 17 años que comienza a tener encuentros con Haktarus, una entidad demoníaca. Juntos, descubren secretos que difuminan la línea entre el bien y el mal, explorando los rincones más oscuros del alma humana.
-      </p>
-      <p>
-        Esta obra combina arte detallado y una narrativa profunda, creando una experiencia inmersiva para los lectores amantes de las historias góticas y fantásticas.
-      </p>
-    </section>
+  <section id="about" class="about">
+    <h2>Acerca del Cómic</h2>
+    <p>
+      <strong>Haktarus</strong> es una novela gráfica que narra la historia de Evermont, un joven de 17 años que comienza a tener encuentros con Haktarus, una entidad demoníaca. Juntos, descubren secretos que difuminan la línea entre el bien y el mal, explorando los rincones más oscuros del alma humana.
+    </p>
+    <p>
+      Esta obra combina arte detallado y una narrativa profunda, creando una experiencia inmersiva para los lectores amantes de las historias góticas y fantásticas.
+    </p>
+  </section>
 
-    <section id="gallery" class="gallery">
-      <h2>Galería</h2>
-      <p>Explora algunas de las escenas más impactantes del cómic:</p>
-      <div class="gallery-grid">
-        <img src="haktarus1.jpg" alt="Escena 1 de Haktarus" />
-        <img src="haktarus2.jpg" alt="Escena 2 de Haktarus" />
-        <img src="haktarus3.jpg" alt="Escena 3 de Haktarus" />
-        <img src="haktarus4.jpg" alt="Escena 4 de Haktarus" />
-        <!-- Nueva imagen añadida -->
-        <img src="./assets/images/Def.jpg" alt="Ilustración de Haktarus" />
-      </div>
-    </section>
+  <section id="gallery" class="gallery">
+    <h2>Galería</h2>
+    <p>Explora algunas de las escenas más impactantes del cómic:</p>
+    <div class="gallery-grid">
+      <img src="haktarus1.jpg" alt="Escena 1 de Haktarus">
+      <img src="haktarus2.jpg" alt="Escena 2 de Haktarus">
+      <img src="haktarus3.jpg" alt="Escena 3 de Haktarus">
+      <img src="haktarus4.jpg" alt="Escena 4 de Haktarus">
+    </div>
+  </section>
 
-    <section id="characters" class="characters">
-      <h2>Personajes</h2>
-      <div class="character-list">
-        <article class="character">
-          <h3>Evermont</h3>
-          <p>
-            Un joven de 17 años con un pasado lleno de tragedias. A pesar de sus dudas, demuestra una valentía inesperada cuando se enfrenta a los secretos de Kartovia.
-          </p>
-        </article>
-        <article class="character">
-          <h3>Haktarus</h3>
-          <p>
-            Una entidad demoníaca cuya verdadera naturaleza es un misterio. Actúa como mentor y antagonista, empujando a Evermont a enfrentarse a sus miedos más profundos.
-          </p>
-        </article>
-        <article class="character">
-          <h3>Kronulk</h3>
-          <p>
-            Una enigmática joven con un conocimiento profundo de las antiguas leyendas de Kartovia. A menudo es la voz de la razón en momentos de desesperación.
-          </p>
-        </article>
-        <article class="character">
-          <h3>Shavarkunk</h3>
-          <p>
-            Gobernante de Kartovia, atrapado entre proteger a su pueblo y enfrentar las fuerzas oscuras que amenazan su reino.
-          </p>
-        </article>
-      </div>
-    </section>
+  <section id="characters" class="characters">
+    <h2>Personajes</h2>
+    <div class="character-list">
+      <article class="character">
+        <h3>Evermont</h3>
+        <p>
+          Un joven de 17 años con un pasado lleno de tragedias. A pesar de sus dudas, demuestra una valentía inesperada cuando se enfrenta a los secretos de Kartovia.
+        </p>
+      </article>
+      <article class="character">
+        <h3>Haktarus</h3>
+        <p>
+          Una entidad demoníaca cuya verdadera naturaleza es un misterio. Actúa como mentor y antagonista, empujando a Evermont a enfrentarse a sus miedos más profundos.
+        </p>
+      </article>
+      <article class="character">
+        <h3>Kronulk</h3>
+        <p>
+          Una enigmática joven con un conocimiento profundo de las antiguas leyendas de Kartovia. A menudo es la voz de la razón en momentos de desesperación.
+        </p>
+      </article>
+      <article class="character">
+        <h3>Shavarkunk</h3>
+        <p>
+          Gobernante de Kartovia, atrapado entre proteger a su pueblo y enfrentar las fuerzas oscuras que amenazan su reino.
+        </p>
+      </article>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-      <h2>Contacto</h2>
-      <p>
-        ¿Tienes preguntas o quieres saber más sobre <strong>Haktarus</strong>? Escríbenos a nuestro correo electrónico:
-        <a href="mailto:contact@haktarus.com">contact@haktarus.com</a>.
-      </p>
-      <p>También puedes seguirnos en nuestras redes sociales para obtener las últimas actualizaciones.</p>
-    </section>
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <p>
+      ¿Tienes preguntas o quieres saber más sobre <strong>Haktarus</strong>? Escríbenos a nuestro correo electrónico:
+      <a href="mailto:contact@haktarus.com">contact@haktarus.com</a>.
+    </p>
+    <p>También puedes seguirnos en nuestras redes sociales para obtener las últimas actualizaciones.</p>
+  </section>
 
-    <footer>
-      <p>&copy; 2024 Haktarus Comic. Todos los derechos reservados.</p>
-    </footer>
-  </body>
+  <section id="references" class="references">
+    <h2>Referencias e Inspiraciones</h2>
+    <p>Estas son algunas de las influencias e inspiraciones detrás del cómic <strong>Haktarus</strong>:</p>
+    <ul>
+      <li>Obras de H.P. Lovecraft</li>
+      <li>Mitos y leyendas de la antigua Kartovia</li>
+      <li>Arte gótico y medieval</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Haktarus Comic. Todos los derechos reservados.</p>
+  </footer>
+</body>
 </html>
