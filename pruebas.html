@@ -3,45 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Parallax</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <meta name="theme-color" content="#222222">
+  <title>Haktarus - El Cómic</title>
+  <link href="./css/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/fonts.css">
 </head>
 <body>
-
   <header>
+    <h1>Haktarus</h1>
     <nav>
-      <ul class="nav-list">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+      <ul>
+        <li><a href="#about">Acerca de</a></li>
+        <li><a href="#gallery">Galería</a></li>
+        <li><a href="#characters">Personajes</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="inicio" class="parallax parallax1">
-    <h1>Bienvenido a Nuestro Sitio</h1>
+  <section class="hero">
+    <h2>Bienvenido al mundo de Kartovia</h2>
+    <p>Explora la intrigante historia de Evermont y Haktarus, llena de misterio y aventura.</p>
   </section>
 
-  <section class="content">
-    <h2>Nuestros Servicios</h2>
-    <p>Ofrecemos una variedad de servicios para satisfacer tus necesidades.</p>
+  <section id="about" class="about">
+    <h2>Acerca del Cómic</h2>
+    <p>Descubre la historia de Evermont y su encuentro con la enigmática entidad Haktarus.</p>
   </section>
 
-  <section id="servicios" class="parallax parallax2">
-    <h1>Explora Más</h1>
+  <section id="gallery" class="gallery">
+    <h2>Galería</h2>
+    <div class="gallery-grid">
+      <img src="./assets/images/haktarus1.jpg" alt="Escena 1">
+      <img src="./assets/images/haktarus2.jpg" alt="Escena 2">
+    </div>
   </section>
 
-  <section id="galeria" class="gallery-grid">
-    <div class="grid-item">Imagen 1</div>
-    <div class="grid-item">Imagen 2</div>
-    <div class="grid-item">Imagen 3</div>
-    <div class="grid-item">Imagen 4</div>
+  <section id="characters" class="characters">
+    <h2>Personajes</h2>
+    <div class="character-list">
+      <div>
+        <h3>Evermont</h3>
+        <p>El joven protagonista que enfrenta oscuros secretos.</p>
+      </div>
+      <div>
+        <h3>Haktarus</h3>
+        <p>La entidad demoníaca que guía y desafía a Evermont.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <p>Contáctanos a <a href="mailto:contact@haktarus.com">contact@haktarus.com</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    <p>&copy; 2024 Haktarus Comic. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>

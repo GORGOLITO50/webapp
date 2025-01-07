@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('./fonts/GrenzeGotisch-Regular.woff2') format('woff2'),
+         url('./fonts/GrenzeGotisch-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('./fonts/GrenzeGotisch-Bold.woff2') format('woff2'),
+         url('./fonts/GrenzeGotisch-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  

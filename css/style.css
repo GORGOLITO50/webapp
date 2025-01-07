@@ -1,88 +1,80 @@
-/* General Reset */
-body, html {
+/* General Styles */
+body {
+    font-family: 'Grenze Gotisch', serif;
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    color: #eaeaea;
+    background: #111;
   }
   
   header {
-    background-color: #333;
+    background: #222;
     padding: 1rem;
-    position: fixed;
-    width: 100%;
+    text-align: center;
+    position: sticky;
     top: 0;
     z-index: 1000;
   }
   
-  .nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+  header h1 {
     margin: 0;
-    padding: 0;
+    font-size: 2rem;
   }
   
-  .nav-list li a {
-    color: white;
+  nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
     text-decoration: none;
-    font-size: 1.2rem;
+    color: #eaeaea;
+    font-size: 1rem;
+  }
+  
+  nav ul li a:hover {
+    color: #e63946;
   }
   
   .parallax {
-    height: 100vh;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: url('../assets/images/parallax1.jpg') center/cover no-repeat fixed;
     color: white;
+    padding: 5rem 1rem;
     text-align: center;
   }
   
-  .parallax1 {
-    background-image: url('../assets/images/parallax1.jpg');
-  }
-  
-  .parallax2 {
+  .parallax#gallery {
     background-image: url('../assets/images/parallax2.jpg');
-  }
-  
-  .content {
-    padding: 2rem;
-    text-align: center;
   }
   
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
-    padding: 2rem;
-    background-color: #f4f4f4;
   }
   
-  .grid-item {
-    background-color: #ddd;
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid #ccc;
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
   }
   
   footer {
-    background-color: #333;
-    color: white;
+    background: #222;
+    color: #eaeaea;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
   }
   
   @media (max-width: 768px) {
-    .nav-list li a {
-      font-size: 1rem;
-    }
-  
-    .parallax {
-      height: 50vh;
+    header h1 {
+      font-size: 1.5rem;
     }
   }
   
