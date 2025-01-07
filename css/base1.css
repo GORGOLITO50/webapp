@@ -4,8 +4,7 @@ body {
     padding: 0;
     background: #111;
     color: #eaeaea;
-    background: url('./assets/images/Group_55.svg') repeat;
-    background-size: 100px 100px;
+    background-image: url('./fotos/Group_55.svg') repeat;
   }
 
   header {
