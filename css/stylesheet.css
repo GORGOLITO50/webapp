@@ -2,8 +2,10 @@ body {
   font-family: "Grenze Gotisch", serif;
   margin: 0;
   padding: 0;
-  background-color: #111;
+  background: #111;
   color: #eaeaea;
+  background: url('../assets/images/Group_55.svg') repeat;
+  background-size: 100px 100px;
 }
 
 header {
@@ -12,18 +14,21 @@ header {
   text-align: center;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 header h1 {
+  margin: 0;
+  font-size: 3.5rem;
   color: #e63946;
-  font-size: 3rem;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
-  list-style: none;
   padding: 0;
+  margin: 0.5rem 0 0;
+  list-style: none;
 }
 
 nav ul li {
@@ -33,35 +38,72 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #eaeaea;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  color: #e63946;
 }
 
 .hero {
   text-align: center;
-  padding: 2rem;
-  background: url('./assets/images/hero-bg.jpg') center/cover no-repeat;
+  padding: 2rem 1rem;
+  background: url("../assets/images/hero-bg.jpg") center/cover no-repeat;
   color: #fff;
 }
 
-section {
-  padding: 2rem;
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 2rem 15px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
 .character-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+  padding: 15px;
+}
+
+.contact {
+  text-align: center;
 }
 
 footer {
   background: #222;
+  color: #eaeaea;
   text-align: center;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -69,13 +111,37 @@ footer {
     font-size: 2rem;
   }
 
-  .hero {
-    padding: 1rem;
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .character-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
   nav ul li {
     margin: 0 0.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .character-list {
+    grid-template-columns: 1fr;
   }
 }
