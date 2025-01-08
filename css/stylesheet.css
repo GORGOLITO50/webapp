@@ -1,147 +1,165 @@
-body {
-  font-family: "Grenze Gotisch", serif;
-  margin: 0;
-  padding: 0;
-  background: #111;
-  color: #eaeaea;
-  background: url('../assets/images/Group_55.svg') repeat;
-  background-size: 100px 100px;
-}
-
-header {
-  background: #222;
-  padding: 1rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 3.5rem;
-  color: #e63946;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0.5rem 0 0;
-  list-style: none;
-}
-
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #eaeaea;
-  font-size: 1rem;
-}
-
-nav ul li a:hover {
-  color: #e63946;
-}
-
+/* Efecto Parallax para la sección Hero */
 .hero {
+  background: url('./assets/images/hero-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 100px 20px;
+  color: white;
   text-align: center;
-  padding: 2rem 1rem;
-  background: url("../assets/images/hero-bg.jpg") center/cover no-repeat;
-  color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
-.hero h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.section {
-  padding: 2rem 15px;
-  max-width: 1200px;
-  margin: 0 auto;
+.hero::after {
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.gallery img {
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item img {
   width: 100%;
-  border-radius: 5px;
-  transition: transform 0.3s;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
+.gallery-item p {
+  margin-top: 10px;
+  color: #eee;
+  font-size: 1rem;
 }
 
+/* Padding para textos e imágenes */
+section {
+  padding: 40px 20px;
+}
+
+section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo para los personajes */
 .character-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 15px;
+  gap: 1.5rem;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.contact {
-  text-align: center;
+.character-list div {
+  background-color: #222;
+  color: #eee;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-footer {
-  background: #222;
-  color: #eaeaea;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+.character-list div:hover {
+  transform: translateY(-10px);
 }
 
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
+/* Animación para títulos */
+h2, h3 {
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-in-out forwards;
+}
 
-  .hero h2 {
-    font-size: 1.5rem;
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  .character-list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-@media (max-width: 480px) {
-  nav ul li {
-    margin: 0 0.5rem;
-  }
 
-  nav ul li a {
-    font-size: 0.9rem;
-  }
+/* Animaciones suaves para imágenes */
+.gallery-grid img {
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-  .hero h2 {
-    font-size: 1.2rem;
-  }
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
 
-  .hero p {
-    font-size: 0.8rem;
-  }
+/* Padding para textos e imágenes */
+section {
+  padding: 40px 20px;
+}
 
-  .character-list {
-    grid-template-columns: 1fr;
+section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo para los personajes */
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.character-list div {
+  background-color: #222;
+  color: #eee;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.character-list div:hover {
+  transform: translateY(-10px);
+}
+
+/* Animación para títulos */
+h2, h3 {
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
