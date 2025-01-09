@@ -51,6 +51,13 @@ nav ul li a:hover {
   color: #e63946;
 }
 
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: url("background.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
 .hero h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
