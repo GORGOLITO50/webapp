@@ -9,6 +9,76 @@
   z-index: 1;
 }
 
+header {
+  background: #222;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  color: #e63946;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #eaeaea;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  color: #e63946;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about,
+.gallery,
+.characters,
+.contact,
+.references {
+  padding: 2rem 1rem;
+}
+
+body {
+  font-family: "Grenze Gotisch", serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #eaeaea;
+  background-image: url('./fotos/Group_55.svg') repeat;
+}
+
 .hero::after {
   content: '';
   background: rgba(0, 0, 0, 0.5);
