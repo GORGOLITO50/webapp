@@ -1,4 +1,4 @@
-/* Efecto Parallax para la sección Hero */
+
 .hero {
   background: url('./assets/images/hero-background.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -122,14 +122,13 @@ body {
   font-size: 1rem;
 }
 
-/* Padding para textos e imágenes */
 section {
   padding: 40px 20px;
   max-width: 800px;
-  margin: 0 auto; /* Centra la sección horizontalmente */
+  margin: 0 auto; 
   display: flex;
   flex-direction: column;
-  align-items: center; /* Asegura que el contenido esté centrado */
+  align-items: center; 
   text-align: center;
 }
 
@@ -141,7 +140,6 @@ section .content {
   text-align: center;
 }
 
-/* Estilo para los personajes */
 .character-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -164,7 +162,6 @@ section .content {
   transform: translateY(-10px);
 }
 
-/* Animación para títulos */
 h2, h3 {
   text-align: center;
   position: relative;
@@ -183,7 +180,6 @@ h2, h3 {
   }
 }
 
-/* Animaciones suaves para imágenes */
 .gallery-grid img {
   width: 100%;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -194,7 +190,6 @@ h2, h3 {
   opacity: 0.9;
 }
 
-/* Padding para textos e imágenes */
 section {
   padding: 40px 20px;
 }
@@ -205,17 +200,15 @@ section .content {
   padding: 20px;
 }
 
-/* Estilo para los personajes */
-/* Estilo para los personajes */
 .character-list {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  align-items: center; /* Centra los elementos verticalmente */
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: center; 
   gap: 1.5rem;
   padding: 0 20px;
   max-width: 1200px;
-  margin: 0 auto; /* Centra la lista dentro del contenedor */
+  margin: 0 auto; 
 }
 
 .character-list div {
@@ -225,8 +218,8 @@ section .content {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  flex: 1 1 calc(25% - 1.5rem); /* Hace que cada rectángulo ocupe un 25% del ancho menos el espacio del gap */
-  max-width: 250px; /* Limita el ancho máximo de cada rectángulo */
+  flex: 1 1 calc(25% - 1.5rem); 
+  max-width: 250px;
   box-sizing: border-box;
 }
 
@@ -234,8 +227,6 @@ section .content {
   transform: translateY(-10px);
 }
 
-
-/* Animación para títulos */
 h2, h3 {
   position: relative;
   opacity: 0;
