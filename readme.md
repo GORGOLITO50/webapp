@@ -1,3 +1,4 @@
+You can view the live site at: https://GORGOLITO50.github.io/tfhaktarus/
 # intro 
 # Haktarus - El Cómic
 
